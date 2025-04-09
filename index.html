@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNIPPET Products</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --snippet-orange: #ff6347;
+            --snippet-yellow: #ffc107;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffffff;
+            color: #333;
+            padding: 2rem;
+        }
+        .product-card {
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background-color: #fff;
+            text-align: center;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .product-image {
+            width: 100%;
+            max-height: 200px;
+            object-fit: contain;
+            margin-bottom: 1rem;
+        }
+        .inbox-banner {
+            margin-top: 4rem;
+            background-color: #ff6347;
+            color: white;
+            font-size: 1.5rem;
+            text-align: center;
+            padding: 1.5rem;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+        .form-section {
+            max-width: 600px;
+            margin: 4rem auto 2rem;
+            padding: 2rem;
+            border: 2px dashed #ccc;
+            border-radius: 12px;
+            background-color: #fefefe;
+        }
+        .form-section h2 {
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        .form-section input,
+        .form-section textarea {
+            width: 100%;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+        .form-section button {
+            background-color: #ff6347;
+            color: white;
+            font-weight: 600;
+            padding: 0.75rem 2rem;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        .form-section button:hover {
+            background-color: #e5533d;
+        }
+    </style>
+</head>
+<body>
+    <div class="text-center mb-12">
+        <h1 class="text-4xl font-bold text-gray-900">SNIPPET Screen Protectors</h1>
+        <p class="text-lg text-gray-600 mt-2">Only the essentials – our products and prices</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Product Cards (SP-1 to SP-6) -->
+        <div class="product-card p-6">
+            <img src="https://m.media-amazon.com/images/I/71INv7hEt4S.jpg" alt="11.6-inch Notebook Screen Protector" class="product-image">
+            <h3 class="text-xl font-semibold mb-2">SP-1 - 11.6-inch Notebook</h3>
+            <p class="text-gray-500 mb-4">Size: 285×178mm</p>
+            <p class="text-2xl font-bold text-yellow-600">৳1220.00</p>
+        </div>
+        <div class="product-card p-6">
+            <img src="https://m.media-amazon.com/images/I/71vwMsPHqUL.jpg" alt="12.5-inch Notebook Screen Protector" class="product-image">
+            <h3 class="text-xl font-semibold mb-2">SP-2 - 12.5-inch Notebook</h3>
+            <p class="text-gray-500 mb-4">Size: 300×195mm</p>
+            <p class="text-2xl font-bold text-yellow-600">৳1220.00</p>
+        </div>
+        <div class="product-card p-6">
+            <img src="https://ae01.alicdn.com/kf/Sc3ed122eaa35416b9d1905364214a5bbi.jpg" alt="13.3-inch Notebook Screen Protector" class="product-image">
+            <h3 class="text-xl font-semibold mb-2">SP-3 - 13.3-inch Notebook</h3>
+            <p class="text-gray-500 mb-4">Size: 320×208mm</p>
+            <p class="text-2xl font-bold text-yellow-600">৳1320.00</p>
+        </div>
+        <div class="product-card p-6">
+            <img src="https://m.media-amazon.com/images/I/814zVivKQdL._AC_UF894,1000_QL80_.jpg" alt="14.1-inch Notebook Screen Protector" class="product-image">
+            <h3 class="text-xl font-semibold mb-2">SP-4 - 14.1-inch Notebook</h3>
+            <p class="text-gray-500 mb-4">Size: 320×215mm</p>
+            <p class="text-2xl font-bold text-yellow-600">৳1320.00</p>
+        </div>
+        <div class="product-card p-6">
+            <img src="https://i.ebayimg.com/images/g/7IYAAOSwhC5igNM8/s-l1200.jpg" alt="15.6-inch Notebook Screen Protector" class="product-image">
+            <h3 class="text-xl font-semibold mb-2">SP-5 - 15.6-inch Notebook</h3>
+            <p class="text-gray-500 mb-4">Size: 370×228mm</p>
+            <p class="text-2xl font-bold text-yellow-600">৳1420.00</p>
+        </div>
+        <div class="product-card p-6">
+            <img src="https://m.media-amazon.com/images/I/71q0fAP1LcL._AC_UF894,1000_QL80_.jpg" alt="17-inch Desktop Screen Protector" class="product-image">
+            <h3 class="text-xl font-semibold mb-2">SP-6 - 17-inch Desktop</h3>
+            <p class="text-gray-500 mb-4">Size: 370×300mm</p>
+            <p class="text-2xl font-bold text-yellow-600">৳1545.00</p>
+        </div>
+    </div>
+
+    <!-- Customer Info Form -->
+    <div class="form-section">
+        <h2>Order / Inquiry Form</h2>
+        <form action="https://formsubmit.co/arnobzzz@gmail.com" method="POST">
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="tel" name="phone" placeholder="Phone Number" required>
+            <input type="text" name="address" placeholder="Full Address" required>
+            <textarea name="message" placeholder="Your message or product code (e.g. SP-3)" rows="4"></textarea>
+            <input type="hidden" name="_captcha" value="false">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <div class="inbox-banner">
+        INBOX FOR BUYING
+    </div>
+</body>
+</html>
