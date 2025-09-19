@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF‑8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Order Success — I’mperfect</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="container header-main">
+      <div class="logo">I’mperfect</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Shop</a>
+        <a href="checkout.html">Cart</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="order-success container">
+    <h2>Thank you for your order!</h2>
+    <p>Your order has been placed successfully.</p>
+    <p>Order ID: <span id="order-id"></span></p>
+  </section>
+
+  <footer>
+    <div class="container">
+      &copy; 2025 I’mperfect. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    // Read order_id from query string
+    const params = new URLSearchParams(window.location.search);
+    const oid = params.get('order_id');
+    document.getElementById('order-id').innerText = oid || '';
+  </script>
+</body>
+</html>
