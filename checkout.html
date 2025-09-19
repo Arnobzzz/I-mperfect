@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checkout — I’mperfect</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1 class="logo">I’mperfect</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Shop</a>
+        <a href="checkout.html">Cart</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="checkout container">
+    <h2>Your Cart</h2>
+    <div id="cart-items"></div>
+    <div id="cart-summary"></div>
+
+    <h3>Payment via BKASH</h3>
+    <div class="bkash-info">
+      <p>Send payment to BKASH number: <strong>YOUR_BKASH_NUMBER</strong></p>
+      <p>Then enter your transaction ID here:</p>
+      <input type="text" id="bkash-txid" placeholder="Transaction ID">
+      <button id="confirm-payment">Confirm Payment</button>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 I’mperfect. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@latest/dist/umd/supabase.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
