@@ -3,39 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>I’mperfect — Umbrellas & Shoes</title>
+  <title>I’mperfect — Home</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header>
-    <div class="container">
-      <h1 class="logo">I’mperfect</h1>
+    <div class="container header-main">
+      <div class="logo">I’mperfect</div>
       <nav>
         <a href="index.html">Home</a>
         <a href="products.html">Shop</a>
         <a href="checkout.html">Cart</a>
       </nav>
     </div>
+    <div class="search-bar">
+      <input type="text" id="search-input" placeholder="Search products...">
+      <button id="search-button">Search</button>
+    </div>
   </header>
 
   <section class="hero">
-    <div class="container">
-      <h2>Classy Umbrellas & Stylish Shoes</h2>
-      <p>Trendy, aligned, and just for you.</p>
-      <a class="btn" href="products.html">Shop Now</a>
-    </div>
+    <img src="assets/hero-banner.jpg" alt="Hero Banner">
   </section>
 
   <section class="featured container">
-    <h3>Featured Products</h3>
-    <div id="featured-products" class="product-grid">
-      <!-- JS will insert featured product cards here -->
-    </div>
+    <h2>Featured Products</h2>
+    <div id="featured-products" class="product-grid"></div>
   </section>
 
   <footer>
     <div class="container">
-      <p>&copy; 2025 I’mperfect. All Rights Reserved.</p>
+      &copy; 2025 I’mperfect. All rights reserved.
     </div>
   </footer>
 
