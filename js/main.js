@@ -1,11 +1,9 @@
-// Supabase + BKash config with your values
 const SUPABASE_URL = "https://fgvbbjvcpsnoiebvcqqe.supabase.co";
-const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZndmJianZjcHNob2llYnZjcXFlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyNjEwNTAsImV4cCI6MjA3MzgzNzA1MH0.ieQmz3FgG3ZfnltgUczcxdBSVRPCtJU2GYC9qdSVjvY";
+const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZndmJianZjcHNub2llYnZjcXFlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyNjEwNTAsImV4cCI6MjA3MzgzNzA1MH0.ieQmz3FgG3ZfnltgUczcxdBSVRPCtJU2GYC9qdSVjvY";
 const BKASH_NUMBER = "01860066158";
 
 const { createClient } = supabase;
 const supabaseClient = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-
 
 let cart = [];
 
@@ -20,7 +18,7 @@ function saveCart() {
 }
 
 async function fetchProducts() {
-  const { data, error } = await supabase
+  const { data, error } = await supabaseClient
     .from("products")
     .select("*");
   if (error) {
@@ -83,7 +81,7 @@ async function renderCart() {
   container.innerHTML = "";
   let total = 0;
   for (const item of cart) {
-    const { data, error } = await supabase
+    const { data, error } = await supabaseClient
       .from("products")
       .select("price", "name")
       .eq("id", item.id)
@@ -126,14 +124,14 @@ async function confirmPayment() {
   }
   let amount = 0;
   for (const item of cart) {
-    const { data, error } = await supabase
+    const { data, error } = await supabaseClient
       .from("products")
       .select("price")
       .eq("id", item.id)
       .single();
     if (!error && data) amount += data.price * item.qty;
   }
-  const { data, error } = await supabase
+  const { error } = await supabaseClient
     .from("orders")
     .insert([
       {
