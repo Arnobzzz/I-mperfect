@@ -1,0 +1,102 @@
+/* General reset & base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background: #f9f9f9;
+  line-height: 1.5;
+}
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+/* Header */
+header {
+  background: #fff;
+  padding: 20px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.logo {
+  float: left;
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+}
+nav {
+  float: right;
+}
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+}
+nav a:hover {
+  color: #555;
+}
+/* Hero Section */
+.hero {
+  background: url('assets/hero-bg.jpg') center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 100px 0;
+}
+.hero h2 { font-size: 2.5rem; margin-bottom: 10px; }
+.hero p { font-size: 1.2rem; margin-bottom: 20px; }
+.btn {
+  padding: 10px 25px;
+  background: #333;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.btn:hover { background: #555; }
+/* Product Grid */
+.product-grid {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  margin: 40px 0;
+}
+.product-card {
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform .3s ease;
+}
+.product-card:hover { transform: translateY(-5px); }
+.product-card img { max-width: 100%; height: auto; object-fit: cover; }
+.product-card h4 { margin: 15px 0 10px; font-size: 1.1rem; color: #333; }
+.product-card p.price { color: #888; font-size: 1rem; }
+.product-card button {
+  padding: 10px 20px; background: #333; color: #fff; border: none; border-radius: 5px; cursor: pointer;
+}
+.product-card button:hover { background: #555; }
+/* Checkout & Cart */
+.checkout .container { padding: 40px 0; }
+#cart-items { margin-bottom: 20px; }
+.cart-item { display: flex; justify-content: space-between; margin-bottom: 10px; }
+.cart-item .item-info h4 { font-size: 1rem; }
+.cart-item .item-info span { color: #666; }
+.cart-item .item-actions button {
+  padding: 5px 10px; font-size: 0.9rem; margin-left: 10px; cursor: pointer;
+}
+#cart-summary { font-size: 1.2rem; font-weight: bold; margin-bottom: 30px; }
+.bkash-info {
+  background: #fff; padding: 20px; border: 1px solid #ccc; border-radius: 8px;
+}
+.bkash-info input[type="text"] {
+  width: 100%; padding: 10px; margin: 10px 0 20px 0; border: 1px solid #ccc; border-radius: 4px;
+}
+.bkash-info button {
+  padding: 10px 20px; background: #0077cc; color: #fff; border: none; border-radius: 5px; cursor: pointer;
+}
+.bkash-info button:hover { background: #005fa3; }
+footer {
+  background: #222; color: #ccc; padding: 20px 0; text-align: center;
+}
