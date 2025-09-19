@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>I’mperfect — Home</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+  <!-- Header -->
   <header>
     <div class="container header-main">
       <div class="logo">I’mperfect</div>
@@ -17,26 +18,34 @@
       </nav>
     </div>
     <div class="search-bar">
-      <input type="text" id="search-input" placeholder="Search products...">
+      <input type="text" id="search-input" placeholder="Search products..." />
       <button id="search-button">Search</button>
     </div>
   </header>
 
+  <!-- Hero Banner -->
   <section class="hero">
-    <img src="assets/hero-banner.jpg" alt="Hero Banner">
+    <img
+      src="https://images.unsplash.com/photo-1600185365311-81348b7a7c7b?auto=format&fit=crop&w=1350&q=80"
+      alt="Hero Banner"
+      style="width: 100%; height: auto; border-bottom: 4px solid #ddd;"
+    />
   </section>
 
+  <!-- Featured Products -->
   <section class="featured container">
     <h2>Featured Products</h2>
     <div id="featured-products" class="product-grid"></div>
   </section>
 
+  <!-- Footer -->
   <footer>
     <div class="container">
       &copy; 2025 I’mperfect. All rights reserved.
     </div>
   </footer>
 
+  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@latest/dist/umd/supabase.min.js"></script>
   <script src="js/main.js"></script>
 </body>
